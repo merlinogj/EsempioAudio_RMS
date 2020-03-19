@@ -3,8 +3,9 @@ Amplitude amp;
 AudioIn in;
 
 void setup() {
-  size(640, 360);
-  background(255);
+  fullScreen(P2D, 1);
+  //size(640, 360);
+  //background(0);
 
   // Create an Input stream which is routed into the Amplitude analyzer
   amp = new Amplitude(this);
@@ -14,6 +15,8 @@ void setup() {
 }
 
 void draw() {
-  rect(200, 300, amp.analyze()*200, amp.analyze()*100);
-  ellipse(100, 100, amp.analyze()*200, amp.analyze()*100);
+  background(0);
+  noStroke();
+  //rect(1200, 300, amp.analyze()*200, amp.analyze()*100);
+  ellipse(500, 300, 1000, amp.analyze()*600);
 }
